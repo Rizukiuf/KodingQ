@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Web for learning IT and programming.">
+    <title>Dashboard KodingQ</title>
+    
+    <!-- My Own Styles -->
+    <link rel="stylesheet" href="assets/styles/style.css" />
+   
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap" rel="stylesheet">
+    
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="navbar-container">
+      <div class="jumbotron">
+        <p>
+          Program bootcamp online untuk belajar pemrograman web secara intensif. <a href="javascript:void(0)">Lihat di sini</a>
+        </p>
+      </div>
+      <nav>
+        <a href="index.html">
+          <img class="logo" src="assets/images/logo_kodingq.png" alt="KodingQ">
+        </a>
+        <ul class="nav-mid">
+          <li>
+            <a href="#course">Course</a>
+          </li>
+          <li>
+            <a href="#program">Program</a>
+          </li>
+          <li>
+            <a href="#challenge">Challenge</a>
+          </li>
+          <li>
+            <a href="#event">Event</a>
+          </li>
+        </ul>
+        <ul class="nav-right">
+          <li>
+            <i class="fa-regular fa-bell"></i>
+          </li>
+          <li>
+            <img class="avatar" src="assets/images/avatar.jpg" alt="Avatar">
+          </li>
+          <!-- tombol dropdown menu -->
+          <li class="dropdown-btn">
+            <i class="fa-solid fa-bars"></i>
+          </li>
+        </ul>
+      </nav>
+      
+      <!-- konten dropdown menu -->
+      <div class="dropdown-content">
+        <ul>
+          <li>
+            <a href="#course">Course</a>
+          </li>
+          <li>
+            <a href="#program">Program</a>
+          </li>
+          <li>
+            <a href="#challenge">Challenge</a>
+          </li>
+          <li>
+            <a href="#event">Event</a>
+          </li>
+        </ul>
+      </div>
+    </header>
+    
+
+    <!-- Main -->
+    <main>
+
+      <!-- Konten Main -->
+      <div id="content">
+        <div id="hero">
+          <div id="hero-slider" class="slider-container">
+            <div class="slider-wrapper" id="hero-list"></div>
+          
+            <!-- Navigation Arrows -->
+            <button class="prev btn" onclick="plusSlides(-1)">&#10094;</button>
+            <button class="next btn" onclick="plusSlides(1)">&#10095;</button>
+          
+            <!-- Dots for navigation -->
+            <div class="slider-dots" id="slider-dots"></div>
+          </div>
+        </div>
+       
+        <!-- Course -->
+        <article id="course" class="card">
+          <h2>Course</h2>
+          <p>Pilih kursus pemrograman yang sesuai dengan minat dan kebutuhan Anda.</p>
+          
+          <!-- Search and Filter -->
+          <div class="search-filter">
+            <input type="text" id="search-input-course" placeholder="Cari kursus..." />
+            <select id="filter-select-category">
+              <option value="all">Semua Kategori</option>
+            </select>
+            <select id="sort-select">
+              <option value="rating">Sort by Rating</option>
+              <option value="students">Sort by Students</option>
+            </select>
+          </div>
+        
+          <!-- List of courses -->
+          <div class="course-list" id="course-list"></div>
+        
+          <!-- Pagination controls -->
+          <div class="pagination-controls">
+            <button id="prev-page" class="btn">Sebelumnya</button>
+            <span id="page-info"></span>
+            <button id="next-page" class="btn">Selanjutnya</button>
+          </div>
+        
+          <button class="btn">Lihat Semua Kursus</button>
+        </article>
+       
+        <!-- Program -->
+        <article id="program" class="card">
+          <h2>Program</h2>
+          <p>Ikuti program bootcamp online untuk belajar pemrograman web secara intensif. Program kami dirancang oleh para ahli di bidangnya dan disusun secara sistematis.</p>
+
+          <!-- Search and Filter -->
+          <div class="search-filter">
+            <input type="text" id="search-input-program" placeholder="Cari program...">
+          </div>
+        
+          <!-- Program list will be generated here -->
+          <div class="program-list" id="program-list"></div>
+        </article>
+      </div>
+ 
+
+      <!-- Aside | Konten samping -->
+      <aside>
+        <div>
+          <!-- Challenge -->
+          <article id="challenge" class="card">
+            <h2>Challenge</h2>
+            <p>Ikuti challenge pemrograman dan asah kemampuan pemrograman Anda.</p>
+            <ul>
+              <li>
+                <h3>Challenge 1</h3>
+                <p>Challenge membuat aplikasi web sederhana menggunakan HTML, CSS, dan JavaScript.</p>
+              </li>
+              <li>
+                <h3>Challenge 2</h3>
+                <p>Challenge membuat aplikasi web sederhana menggunakan ReactJS.</p>
+              </li>
+              <li>
+                <h3>Challenge 3</h3>
+                <p>Challenge membuat aplikasi web sederhana menggunakan NodeJS dan Express.</p>
+              </li>
+            </ul>
+            <button class="btn">Lihat Semua Challenge</button>
+          </article>
+          <!-- Event -->
+          <article id="event" class="card">
+            <h2>Event</h2>
+            <p>Ikuti event pemrograman dan jaringan dengan para programmer lainnya.</p>
+            <ul>
+              <li>
+                <h3>Event 1</h3>
+                <p>Event meetup programmer di Jakarta.</p>
+              </li>
+              <li>
+                <h3>Event 2</h3>
+                <p>Event webinar tentang pemrograman web.</p>
+              </li>
+              <li>
+                <h3>Event 3</h3>
+                <p>Event hackathon untuk pemrograman web.</p>
+              </li>
+            <button class="btn">Lihat Semua Event</button>
+          </article>
+
+        </div>
+
+        <!-- Profile -->
+        <article class="profile card">
+          <header>
+            <h2>Profil Pembuat</h2>
+            <figure>
+              <img src="assets/images/foto_profil.jpg" alt="Foto Profil" />
+              <figcaption>Foto Profil</figcaption>
+            </figure>
+          </header>
+       
+          <section>
+            <h3>Informasi Lainnya</h3>
+       
+            <table>
+              <tr>
+                <th>Nama Lengkap</th>
+                <td>Rizki Utama Fauzi</td>
+              </tr>
+              <tr>
+                <th>Nama Panggilan</th>
+                <td>Rizu</td>
+              </tr>
+              <tr>
+                <th>Alamat</th>
+                <td>Brebes</td>
+              </tr>
+              <tr>
+                <th>Bidang Keahlian</th>
+                <td>Web Development, Machine Learning</td>
+              </tr>
+              <tr>
+                <th>Email</th>
+                <td><a href="mailto:rizkiutamafauzi@gmail.com">rizkiutamafauzi@gmail.com</a></td>
+              </tr>
+              <tr>
+                <th>LinkedIn</th>
+                <td><a href="https://www.linkedin.com/in/rizuki-uf/">rizuki-uf</a></td>
+              </tr>
+              <tr>
+                <th>Instagram</th>
+                <td><a href="https://www.instagram.com/rizuki_uf">rizuki_uf</a></td>
+              </tr>
+            </table>
+          </section>
+        </article>
+      </aside>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer>
+      <p>&#169; 2024 KodingQ | Platform kursus IT dan komunitas programmer <br>
+        <a href="javascript:void(0)">Terms</a> . <a href="javascript:void(0)">Privacy</a>
+      </p>
+    </footer>
+
+
+    <!-- My Own Scripts -->
+    <script src="assets/scripts/script.js"></script>
+  </body>
+</html>

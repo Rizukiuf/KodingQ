@@ -1,0 +1,504 @@
+/* CSS variable */
+:root {
+  --main-color: #384B70;
+  --secondary-color: #507687;
+  --accent-color: #00a2c6;
+  
+  --light: #FCFAEE;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 60px;
+}
+
+body {
+  font-family: 'Comfortaa', sans-serif;
+
+  margin: 0;
+  padding: 0;
+}
+
+p {
+	line-height: 1.5;
+}
+
+a {
+  color: var(--accent-color);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+h2,
+h3 {
+  color: var(--secondary-color);
+}
+
+
+/* Header */
+header.navbar-container {
+  display: inline;
+}
+
+.navbar-container .jumbotron {
+  font-size: 16px;
+  padding: 20px;
+  background-color: var(--secondary-color);
+  text-align: center;
+  color: white;
+}
+
+.navbar-container nav {
+  background-color: var(--main-color);
+  padding: 5px 30px;
+
+  position: sticky;
+  top: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  z-index: 10;
+}
+
+.navbar-container nav a img.logo {
+  height: 40px;
+}
+
+.navbar-container nav ul {
+  padding-inline: 0.2rem;
+  display: flex;
+  align-items: center;
+
+  gap: 0.2rem;
+}
+
+.navbar-container nav ul.nav-mid {
+  flex-wrap: wrap;
+}
+
+.navbar-container nav ul li {
+  list-style-type: none;
+}
+
+.navbar-container nav ul li a {
+  padding: 0.5rem 1.5rem;
+  border-radius: 999px;
+  /* font-size: 1rem; */
+  text-decoration: none;
+
+	color: white;
+}
+ 
+.navbar-container nav ul li a:hover,
+.navbar-container nav ul li i:hover,
+.navbar-container nav ul.nav-right li img.avatar:hover {
+  background-color: #465f91;
+  color: var(--light);
+
+  transition: background-color 0.3s;
+}
+
+.navbar-container nav ul.nav-right {
+  padding: 0;
+  margin: 0;
+  gap: 0.5rem;
+}
+
+.navbar-container nav ul.nav-right li {
+  /* border: 1px red solid; */
+  display: flex;
+}
+
+.navbar-container nav ul.nav-right li i {
+  font-size: 1.7rem;
+  color: var(--light);
+
+  padding: 0.5rem 0.7rem;
+  border-radius: 999px;
+
+  cursor: pointer;
+}
+
+.navbar-container nav ul.nav-right li img.avatar {
+  width: 2.7rem;
+  height: 2.7rem;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  outline: 1px solid var(--light);
+  outline-offset: -0.3rem;
+  padding: 0.3rem;
+  cursor: pointer;
+}
+
+.navbar-container nav ul.nav-right li.dropdown-btn {
+  display: none;
+}
+
+.navbar-container .dropdown-content {
+  display: none;
+}
+
+.dropdown-content ul li {
+  list-style-type: none;
+}
+
+
+/* Main Content */
+main {
+  padding: 20px;
+ 
+  display: flex;
+  gap: 1.5rem;
+}
+ 
+#content {
+  flex: 5;
+
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 1rem 2rem;
+}
+
+/* Hero Slider Container */
+.slider-container {
+  position: relative;
+  max-width: 100%;
+  height: 400px;
+  overflow: hidden;
+}
+
+.slider-wrapper {
+  display: flex;
+  transition: transform 0.4s ease-in-out;
+}
+
+.hero-item {
+  min-width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 50px;
+  background-color: #f8f9fa;
+  border-radius: 16px;
+  z-index: 1;
+}
+
+.hero-desc h1 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: var(--secondary-color);
+}
+
+.hero-desc p {
+  font-size: 0.9em;
+  margin-bottom: 20px;
+}
+
+.hero-image {
+  width: 40%;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  font-weight: bold;
+  font-size: 18px;
+  user-select: none;
+  background-color: rgba(80, 118, 135, 0.5) !important;
+  z-index: 2;
+  margin-inline: 4px;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  background-color: #465f91 !important;
+}
+
+.slider-dots {
+  text-align: center;
+  padding: 10px 0;
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  z-index: 2;
+}
+
+.slider-dots span {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #ddd;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.3s;
+}
+
+.slider-dots .active {
+  background-color: #717171;
+}
+
+.slider-dots span:hover {
+  background-color: #717171;
+}
+
+#hero button:hover,
+.btn:hover,
+#course .course-list .course-item button:hover {
+  background-color: #465f91;
+}
+
+
+.card {
+  box-shadow: 0 2px 8px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 16px;
+
+  padding: 20px;
+}
+
+.featured-image {
+  width: 100%;
+  max-height: 300px;
+
+  object-fit: cover;
+  object-position: center;
+}
+
+.btn {
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  background-color: var(--secondary-color);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  font: inherit;
+
+  transition: background-color 0.3s;
+}
+
+
+/* Course */
+#course .course-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1rem;
+}
+
+#course .course-list .course-item {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+#course .course-list .course-item:hover,
+#program .program-list .program-item:hover,
+aside .profile:hover {
+  box-shadow: 0 2px 8px 1px rgba(0, 0, 0, 0.5);
+
+  transition: box-shadow 0.3s;
+}
+
+#course .course-list .course-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 16px;
+}
+
+#course .course-list .course-item h3 {
+  margin-bottom: 0.5rem;
+}
+
+#course .course-list .course-item p {
+  margin: 0.5rem 0;
+}
+
+#course .course-list .course-item button {
+  margin-top: auto;
+}
+
+#course .course-list .course-item button[disabled] {
+  background-color: #ccc;
+}
+
+/* Search and Filter */
+.search-filter {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  flex-flow: row wrap;
+  margin-bottom: 1rem;
+}
+
+.search-filter #search-input-course,
+#filter-select-category,
+#sort-select,
+#search-input-program {
+  font: inherit;
+  font-size: 0.9rem;
+  border-radius: 999px;
+  padding: 0.2rem 0.4rem;
+}
+
+/* Pagination */
+.pagination-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.pagination-controls button {
+  font-size: 0.9rem;
+  margin: 1rem 0;
+}
+
+.pagination-controls button:hover {
+  background-color: #465f91;
+}
+
+
+/* Program */
+#program .program-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1rem;
+}
+
+
+/* Aside */
+aside {
+  flex: 1;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  gap: 1rem;
+}
+
+aside div {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 1rem;
+}
+
+.profile header {
+  text-align: center;
+}
+
+.profile img {
+  width: 200px;
+  border-radius: 16px;
+}
+
+.profile section {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+
+
+/* Footer */
+footer {
+  padding: 20px;
+  color: white;
+  background-color: #384B70;
+
+  text-align: center;
+  font-weight: bold;
+}
+
+
+/* Media Queries */
+/* Perangkat dengan lebar layar 1200px dan di bawahnya */
+@media screen and (max-width: 1200px) {
+  main {
+    flex-flow: column nowrap;
+  }
+
+  .slider-container {
+    height: auto;
+  }
+
+  main aside {
+    align-self: center;
+  }
+
+  aside div {
+    flex-flow: row nowrap;
+  }
+}
+
+/* Perangkat dengan lebar layar 768px dan di bawahnya */
+@media screen and (max-width: 768px) {
+
+  main aside {
+    align-self: stretch;
+  }
+
+  .hero-item {
+    flex-flow: column nowrap;
+    padding: 20px;
+  }
+
+  .hero-item .hero-desc {
+    order: 2;
+  }
+
+  .hero-item .hero-image {
+    width: 60%;
+    max-width: 300px;
+  }
+
+  aside div {
+    flex-flow: column nowrap;
+  }
+
+  .navbar-container nav ul.nav-mid {
+    display: none;
+  }
+
+  .navbar-container nav ul.nav-right li.dropdown-btn {
+    display: block;
+  }
+
+  .dropdown-content {
+    display: none;
+    position: fixed;
+    top: 0px;
+    right: 0;
+    width: 100%;
+    background-color: var(--main-color);
+    color: var(--light);
+    z-index: 100;
+  }
+  
+  .dropdown-content a {
+    padding: 0.5rem 1.5rem;
+    display: block;
+    color: var(--light);
+  }
+
+  /* Tampilkan ketika dropdown menu button diklik */
+  .dropdown-content.show {
+    display: block;
+  }
+}
